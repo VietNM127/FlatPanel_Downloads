@@ -6,7 +6,7 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 - [Firmware ESP32 1.0.2 - OTA payload](./FlatPanel-1.0.2-ota.bin)
 - [Firmware ESP32 1.0.2 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.0.2-merged.bin)
-- [Ứng dụng Android 1.4](./DIY-Flat-Panel-Android-1.4.apk)
+- [Ứng dụng Android 1.5](./DIY-Flat-Panel-Android-1.5.apk)
 
 ## Chọn đúng file firmware
 
@@ -27,6 +27,8 @@ Firmware `1.0.1` tăng kích thước chunk OTA qua Wi-Fi từ 64 lên 1024 byte
 Lần nâng cấp từ firmware `1.0.0` lên `1.0.1` vẫn phải dùng giới hạn 64 byte do firmware đang chạy quyết định kích thước chunk. Có thể chờ lần OTA này hoàn tất, hoặc flash file `1.0.1-merged.bin` qua USB để chuyển nhanh. Từ firmware `1.0.1` trở đi, OTA Wi-Fi sẽ dùng chunk 1024 byte.
 
 Firmware `1.0.2` cải thiện Station reconnect: thay thế TCP client cũ bị treo, chủ động reconnect khi mất Wi-Fi và khởi động lại TCP/UDP/mDNS sau khi đường truyền phục hồi. Android `1.4` tìm thiết bị lần lượt bằng IP Station đã lưu, mDNS và UDP broadcast nhiều lần; đồng thời ngăn các thread reconnect cũ phá kết nối mới.
+
+Android `1.5` thêm cache-buster khi kiểm tra `update-manifest.json`, tránh nhận manifest cũ từ cache GitHub/CDN ngay sau khi phát hành bản mới.
 
 ## File manifest
 
