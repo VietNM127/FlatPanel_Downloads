@@ -6,7 +6,7 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 - [Firmware ESP32 1.0.2 - OTA payload](./FlatPanel-1.0.2-ota.bin)
 - [Firmware ESP32 1.0.2 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.0.2-merged.bin)
-- [Ứng dụng Android 1.7](./DIY-Flat-Panel-Android-1.7.apk)
+- [Ứng dụng Android 1.8](./DIY-Flat-Panel-Android-1.8.apk)
 
 ## Chọn đúng file firmware
 
@@ -16,7 +16,7 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 ## Cập nhật qua Wi-Fi
 
-1. Kết nối ứng dụng Android với Flat Panel qua Wi-Fi AP hoặc Wi-Fi Station.
+1. Kết nối ứng dụng Android với Flat Panel qua Wi-Fi Station.
 2. Mở tab **Configure** và chọn **Check for Firmware Update**.
 3. Giữ nguồn và kết nối Wi-Fi ổn định cho đến khi thiết bị tự khởi động lại.
 
@@ -33,6 +33,8 @@ Android `1.5` thêm cache-buster khi kiểm tra `update-manifest.json`, tránh n
 Android `1.6` chỉ bật cập nhật khi phiên bản firmware công bố mới hơn firmware đang chạy. Phiên bản bằng hoặc thấp hơn sẽ hiển thị `No Update` và không cho cài lại.
 
 Android `1.7` hiển thị trạng thái firmware đã mới nhất bằng màu xanh lá để người dùng nhận biết nhanh.
+
+Android `1.8` chỉ cho kiểm tra và cập nhật firmware khi thiết bị đang kết nối qua Wi-Fi Station. Ở AP mode, nút cập nhật đổi thành `Station mode only` và bị vô hiệu hóa vì điện thoại không có đường Internet phù hợp để tải firmware.
 
 ## File manifest
 
