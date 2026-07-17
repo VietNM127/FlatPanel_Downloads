@@ -1,19 +1,19 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.0.1",
+                     "version":  "1.0.2",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/FlatPanel-1.0.1-ota.bin",
-                     "size":  995552,
-                     "crc32":  "43BDC7DD",
-                     "sha256":  "2F49F8AF83708485E5815C474E607D0037E5029986C64CBAD64BD901326A2668",
-                     "notes":  "Firmware 1.0.1 uses 1024-byte Wi-Fi OTA chunks, suppresses per-chunk Serial logging/ACK mirroring, and batches RX yields for much faster updates."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/FlatPanel-1.0.2-ota.bin",
+                     "size":  995808,
+                     "crc32":  "A1352C10",
+                     "sha256":  "86046B7799BED5AA896833BDDFE79FC68751E0EDF3C10DCFD3AC44EC81E0A6FC",
+                     "notes":  "Firmware 1.0.2 improves Station reliability by replacing stale TCP clients, actively reconnecting Wi-Fi, and restarting TCP/UDP/mDNS after link recovery; includes fast 1024-byte OTA."
                  },
     "app":  {
-                "version":  "1.3",
-                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-1.3.apk",
-                "size":  4815682,
-                "sha256":  "7CD330E3C12517BB036349FFE1E548D6E3145555813E93DC9CC7F34D4276BF5B"
+                "version":  "1.4",
+                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-1.4.apk",
+                "size":  4817902,
+                "sha256":  "D6FD26744DB31ACADAC90B53E1C6BD89D73AE6AAD9D73BBE40466A09E1DD55B5"
             }
 }
