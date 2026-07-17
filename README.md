@@ -6,7 +6,7 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 - [Firmware ESP32 1.0.2 - OTA payload](./FlatPanel-1.0.2-ota.bin)
 - [Firmware ESP32 1.0.2 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.0.2-merged.bin)
-- [Ứng dụng Android 1.8](./DIY-Flat-Panel-Android-1.8.apk)
+- [Ứng dụng Android 1.9](./DIY-Flat-Panel-Android-1.9.apk)
 
 ## Chọn đúng file firmware
 
@@ -35,6 +35,8 @@ Android `1.6` chỉ bật cập nhật khi phiên bản firmware công bố mớ
 Android `1.7` hiển thị trạng thái firmware đã mới nhất bằng màu xanh lá để người dùng nhận biết nhanh.
 
 Android `1.8` chỉ cho kiểm tra và cập nhật firmware khi thiết bị đang kết nối qua Wi-Fi Station. Ở AP mode, nút cập nhật đổi thành `Station mode only` và bị vô hiệu hóa vì điện thoại không có đường Internet phù hợp để tải firmware.
+
+Android `1.9` khắc phục lỗi APK `1.8` bị thiếu class Kotlin `MainActivity$Companion` và thoát ngay khi mở. Quy trình phát hành từ bản này luôn clean build toàn bộ DEX; trạng thái nút OTA cũng chỉ được cập nhật theo session Wi-Fi thực tế.
 
 ## File manifest
 
