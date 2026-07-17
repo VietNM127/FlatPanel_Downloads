@@ -1,19 +1,19 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.0.0",
+                     "version":  "1.0.1",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/FlatPanel-1.0.0-ota.bin",
-                     "size":  995312,
-                     "crc32":  "B6845CE1",
-                     "sha256":  "23BDB78A39EC3CAF7CFE28ADBB94E16D5CBF2A99330FF9F6E3B85F3124DF6ECB",
-                     "notes":  "Current stable ESP32 firmware with Wi-Fi OTA support."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/FlatPanel-1.0.1-ota.bin",
+                     "size":  995552,
+                     "crc32":  "43BDC7DD",
+                     "sha256":  "2F49F8AF83708485E5815C474E607D0037E5029986C64CBAD64BD901326A2668",
+                     "notes":  "Firmware 1.0.1 uses 1024-byte Wi-Fi OTA chunks, suppresses per-chunk Serial logging/ACK mirroring, and batches RX yields for much faster updates."
                  },
     "app":  {
-                "version":  "1.2",
-                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-1.2.apk",
-                "size":  4815642,
-                "sha256":  "814AF3A38505678F168128659EE82433088F5E0030C0715081DAD8FE54C62E07"
+                "version":  "1.3",
+                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-1.3.apk",
+                "size":  4815682,
+                "sha256":  "7CD330E3C12517BB036349FFE1E548D6E3145555813E93DC9CC7F34D4276BF5B"
             }
 }
