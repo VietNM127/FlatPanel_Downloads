@@ -6,7 +6,7 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 - [Firmware ESP32 1.0.2 - OTA payload](./FlatPanel-1.0.2-ota.bin)
 - [Firmware ESP32 1.0.2 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.0.2-merged.bin)
-- [Ứng dụng Android 1.9](./DIY-Flat-Panel-Android-1.9.apk)
+- [Ứng dụng Android 2.0](./DIY-Flat-Panel-Android-2.0.apk)
 
 ## Chọn đúng file firmware
 
@@ -37,6 +37,14 @@ Android `1.7` hiển thị trạng thái firmware đã mới nhất bằng màu 
 Android `1.8` chỉ cho kiểm tra và cập nhật firmware khi thiết bị đang kết nối qua Wi-Fi Station. Ở AP mode, nút cập nhật đổi thành `Station mode only` và bị vô hiệu hóa vì điện thoại không có đường Internet phù hợp để tải firmware.
 
 Android `1.9` khắc phục lỗi APK `1.8` bị thiếu class Kotlin `MainActivity$Companion` và thoát ngay khi mở. Quy trình phát hành từ bản này luôn clean build toàn bộ DEX; trạng thái nút OTA cũng chỉ được cập nhật theo session Wi-Fi thực tế.
+
+Android `2.0` chuyển sang release keystore cố định và bổ sung cập nhật ứng dụng ngay trong app. Khi có phiên bản mới hơn, app tải APK từ kho phát hành, kiểm tra kích thước và SHA-256 rồi mở trình cài đặt Android để người dùng xác nhận.
+
+## Cập nhật ứng dụng Android
+
+App tự kiểm tra phiên bản Android mới khi khởi động và chỉ hiển thị hộp thoại nếu manifest công bố phiên bản cao hơn bản đang cài. Lần đầu sử dụng, Android/FydeOS có thể yêu cầu cấp quyền **Install unknown apps**; hệ điều hành luôn yêu cầu người dùng xác nhận trước khi cài.
+
+Android `2.0` là bản đầu tiên dùng release key cố định. Nếu thiết bị đang cài bản `1.9` trở xuống được ký bằng debug key cũ, cần gỡ bản cũ và cài `2.0` một lần. Từ các bản sau có thể cập nhật trực tiếp trong app.
 
 ## File manifest
 
