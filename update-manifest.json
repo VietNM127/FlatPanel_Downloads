@@ -11,9 +11,9 @@
                      "notes":  "Firmware 1.0.2 improves Station reliability by replacing stale TCP clients, actively reconnecting Wi-Fi, and restarting TCP/UDP/mDNS after link recovery; includes fast 1024-byte OTA."
                  },
     "app":  {
-                "version":  "1.5",
-                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-1.5.apk",
-                "size":  4817762,
-                "sha256":  "9C8C27120DF7E371414605E53EEBD54E79A5B10C274473662267AC75B1D0982C"
+                "version":  "1.7",
+                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-1.7.apk",
+                "size":  4817578,
+                "sha256":  "EA3996D85D60C03EE079D398F8BA9CCB8096A75A8168B47184E3F7FFCD67446D"
             }
 }
