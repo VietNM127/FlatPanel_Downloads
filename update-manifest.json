@@ -4,16 +4,16 @@
                      "version":  "1.1.1",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/FlatPanel-1.1.1-ota.bin",
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.1.1-ota.bin",
                      "size":  1005920,
                      "crc32":  "9BEE947E",
                      "sha256":  "B3922F8153F5D0046ECA5BA3D2285D122B785ED025C1A2A3E1CF97F980169236",
                      "notes":  "Firmware 1.1.1 adds a shared power interlock so Main Cover and Scope Cover servos never move simultaneously; commands are rejected while the other servo is moving and load-power homing is serialized with Main Cover priority."
                  },
     "app":  {
-                "version":  "2.5",
-                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-2.5.apk",
-                "size":  4830594,
-                "sha256":  "1675FF42691FD5C098E5E599A40BA55DA50A6D9735EA232B92AE15162B473133"
+                "version":  "2.6",
+                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/DIY-Flat-Panel-Android-2.6.apk",
+                "size":  4830386,
+                "sha256":  "1E0D4D23D63137E03F979A13F6C444D5BAD98D08CB5C9EE154DF6C65CB81376A"
             }
 }

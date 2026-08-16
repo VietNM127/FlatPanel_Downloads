@@ -6,7 +6,7 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 - [Firmware ESP32 1.1.1 - OTA payload](./FlatPanel-1.1.1-ota.bin)
 - [Firmware ESP32 1.1.1 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.1.1-merged.bin)
-- [Ứng dụng Android 2.5](./DIY-Flat-Panel-Android-2.5.apk)
+- [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
 
 ## Chọn đúng file firmware
 
@@ -54,6 +54,8 @@ Android `2.4` chuẩn hóa màn hình cấu hình: Main Cover Configuration và 
 
 Android `2.5` kiểm tra lại bản cập nhật khi ứng dụng quay về foreground. Lần kiểm tra thất bại không còn khóa các lần sau; cơ chế cooldown 30 giây tránh gọi GitHub liên tục và cùng một phiên bản chỉ được nhắc một lần trong mỗi phiên chạy ứng dụng.
 
+Android `2.6` chuyển các URL cập nhật ứng dụng và firmware sang đường dẫn nhánh đầy đủ `refs/heads/main`, tránh GitHub Raw tạm ánh xạ đường dẫn rút gọn `/main` tới commit cũ ngay sau khi phát hành.
+
 ## Cập nhật ứng dụng Android
 
 App tự kiểm tra phiên bản Android mới khi khởi động và khi quay lại foreground, đồng thời chỉ hiển thị hộp thoại nếu manifest công bố phiên bản cao hơn bản đang cài. Lần đầu sử dụng, Android/FydeOS có thể yêu cầu cấp quyền **Install unknown apps**; hệ điều hành luôn yêu cầu người dùng xác nhận trước khi cài.
@@ -64,4 +66,4 @@ Android `2.0` là bản đầu tiên dùng release key cố định. Nếu thi�
 
 `update-manifest.json` được ứng dụng Android đọc trực tiếp từ:
 
-`https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/update-manifest.json`
+`https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/update-manifest.json`
