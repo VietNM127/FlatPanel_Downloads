@@ -54,7 +54,7 @@ Android `2.4` chuẩn hóa màn hình cấu hình: Main Cover Configuration và 
 
 Android `2.5` kiểm tra lại bản cập nhật khi ứng dụng quay về foreground. Lần kiểm tra thất bại không còn khóa các lần sau; cơ chế cooldown 30 giây tránh gọi GitHub liên tục và cùng một phiên bản chỉ được nhắc một lần trong mỗi phiên chạy ứng dụng.
 
-Android `2.6` chuyển các URL cập nhật ứng dụng và firmware sang đường dẫn nhánh đầy đủ `refs/heads/main`, tránh GitHub Raw tạm ánh xạ đường dẫn rút gọn `/main` tới commit cũ ngay sau khi phát hành.
+Android `2.6` đọc manifest bằng đường dẫn nhánh đầy đủ `refs/heads/main`, tránh GitHub Raw tạm ánh xạ đường dẫn rút gọn `/main` tới commit cũ ngay sau khi phát hành. Riêng URL tải APK 2.6 vẫn dùng `/main` làm cầu nâng cấp tương thích với Android 2.4; code 2.6 chấp nhận cả hai dạng URL và các bản sau có thể dùng hoàn toàn đường dẫn mới.
 
 ## Cập nhật ứng dụng Android
 

@@ -12,8 +12,8 @@
                  },
     "app":  {
                 "version":  "2.6",
-                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/DIY-Flat-Panel-Android-2.6.apk",
-                "size":  4830386,
-                "sha256":  "1E0D4D23D63137E03F979A13F6C444D5BAD98D08CB5C9EE154DF6C65CB81376A"
+                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-2.6.apk",
+                "size":  4830754,
+                "sha256":  "895DA7EC238438FC922CEF9183150A542C8B51F3992256C0EA3CA42E1A142686"
             }
 }
