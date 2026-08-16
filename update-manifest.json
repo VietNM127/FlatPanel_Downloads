@@ -1,19 +1,19 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.0.2",
+                     "version":  "1.1.1",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/FlatPanel-1.0.2-ota.bin",
-                     "size":  995808,
-                     "crc32":  "A1352C10",
-                     "sha256":  "86046B7799BED5AA896833BDDFE79FC68751E0EDF3C10DCFD3AC44EC81E0A6FC",
-                     "notes":  "Firmware 1.0.2 improves Station reliability by replacing stale TCP clients, actively reconnecting Wi-Fi, and restarting TCP/UDP/mDNS after link recovery; includes fast 1024-byte OTA."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/FlatPanel-1.1.1-ota.bin",
+                     "size":  1005920,
+                     "crc32":  "9BEE947E",
+                     "sha256":  "B3922F8153F5D0046ECA5BA3D2285D122B785ED025C1A2A3E1CF97F980169236",
+                     "notes":  "Firmware 1.1.1 adds a shared power interlock so Main Cover and Scope Cover servos never move simultaneously; commands are rejected while the other servo is moving and load-power homing is serialized with Main Cover priority."
                  },
     "app":  {
-                "version":  "2.0",
-                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-2.0.apk",
-                "size":  4825778,
-                "sha256":  "356DCA61F6212911E1ECCA3B0E6E8BF1739526F51FB7141FCC2C41BEE9F6D52A"
+                "version":  "2.4",
+                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-2.4.apk",
+                "size":  4829970,
+                "sha256":  "47DB80B74A93AC49B6B774A13E441B5D08ED27F1232562BD2F67B21B28B8B497"
             }
 }

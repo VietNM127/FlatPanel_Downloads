@@ -4,9 +4,9 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 ## Tải xuống
 
-- [Firmware ESP32 1.0.2 - OTA payload](./FlatPanel-1.0.2-ota.bin)
-- [Firmware ESP32 1.0.2 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.0.2-merged.bin)
-- [Ứng dụng Android 2.0](./DIY-Flat-Panel-Android-2.0.apk)
+- [Firmware ESP32 1.1.1 - OTA payload](./FlatPanel-1.1.1-ota.bin)
+- [Firmware ESP32 1.1.1 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.1.1-merged.bin)
+- [Ứng dụng Android 2.4](./DIY-Flat-Panel-Android-2.4.apk)
 
 ## Chọn đúng file firmware
 
@@ -28,6 +28,10 @@ Lần nâng cấp từ firmware `1.0.0` lên `1.0.1` vẫn phải dùng giới h
 
 Firmware `1.0.2` cải thiện Station reconnect: thay thế TCP client cũ bị treo, chủ động reconnect khi mất Wi-Fi và khởi động lại TCP/UDP/mDNS sau khi đường truyền phục hồi. Android `1.4` tìm thiết bị lần lượt bằng IP Station đã lưu, mDNS và UDP broadcast nhiều lần; đồng thời ngăn các thread reconnect cũ phá kết nối mới.
 
+Firmware `1.1.0` bổ sung **Scope Cover** dùng servo riêng trên GPIO26. Scope Cover chỉ được điều khiển từ app Android, có trạng thái, góc Open/Closed và tốc độ riêng; các lệnh Main Cover dành cho N.I.N.A vẫn giữ nguyên.
+
+Firmware `1.1.1` bổ sung interlock nguồn cho hai servo: Main Cover và Scope Cover không thể chạy đồng thời. Lệnh điều khiển servo còn lại sẽ bị từ chối khi một servo đang chạy; quá trình homing lúc khởi động hoặc khi nguồn tải phục hồi được thực hiện lần lượt, ưu tiên Main Cover.
+
 Android `1.5` thêm cache-buster khi kiểm tra `update-manifest.json`, tránh nhận manifest cũ từ cache GitHub/CDN ngay sau khi phát hành bản mới.
 
 Android `1.6` chỉ bật cập nhật khi phiên bản firmware công bố mới hơn firmware đang chạy. Phiên bản bằng hoặc thấp hơn sẽ hiển thị `No Update` và không cho cài lại.
@@ -39,6 +43,14 @@ Android `1.8` chỉ cho kiểm tra và cập nhật firmware khi thiết bị đ
 Android `1.9` khắc phục lỗi APK `1.8` bị thiếu class Kotlin `MainActivity$Companion` và thoát ngay khi mở. Quy trình phát hành từ bản này luôn clean build toàn bộ DEX; trạng thái nút OTA cũng chỉ được cập nhật theo session Wi-Fi thực tế.
 
 Android `2.0` chuyển sang release keystore cố định và bổ sung cập nhật ứng dụng ngay trong app. Khi có phiên bản mới hơn, app tải APK từ kho phát hành, kiểm tra kích thước và SHA-256 rồi mở trình cài đặt Android để người dùng xác nhận.
+
+Android `2.1` bổ sung card điều khiển và phần cấu hình riêng cho Scope Cover. Scope Cover không có LED, không xuất hiện trong N.I.N.A và hoạt động độc lập với Main Cover.
+
+Android `2.2` cho phép ra lệnh Open hoặc Close khi trạng thái Scope Cover là `Unknown`, giúp xác lập lại vị trí sau khi mất nguồn hoặc khi trạng thái chưa được đồng bộ. Hai nút chỉ bị khóa trong lúc servo đang chạy.
+
+Android `2.3` đồng bộ giao diện với interlock firmware: khi Main Cover hoặc Scope Cover đang chạy, các nút chuyển động của servo còn lại cũng bị vô hiệu hóa cho tới khi hành trình kết thúc.
+
+Android `2.4` chuẩn hóa màn hình cấu hình: Main Cover Configuration và Scope Cover Configuration dùng cùng bố cục một card gồm Speed, Open Angle, Closed Angle và một nút Save; tên các mục và nút được đồng bộ nhất quán.
 
 ## Cập nhật ứng dụng Android
 
