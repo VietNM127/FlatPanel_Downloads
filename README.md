@@ -6,7 +6,7 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 - [Firmware ESP32 1.1.1 - OTA payload](./FlatPanel-1.1.1-ota.bin)
 - [Firmware ESP32 1.1.1 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.1.1-merged.bin)
-- [Ứng dụng Android 2.4](./DIY-Flat-Panel-Android-2.4.apk)
+- [Ứng dụng Android 2.5](./DIY-Flat-Panel-Android-2.5.apk)
 
 ## Chọn đúng file firmware
 
@@ -52,9 +52,11 @@ Android `2.3` đồng bộ giao diện với interlock firmware: khi Main Cover 
 
 Android `2.4` chuẩn hóa màn hình cấu hình: Main Cover Configuration và Scope Cover Configuration dùng cùng bố cục một card gồm Speed, Open Angle, Closed Angle và một nút Save; tên các mục và nút được đồng bộ nhất quán.
 
+Android `2.5` kiểm tra lại bản cập nhật khi ứng dụng quay về foreground. Lần kiểm tra thất bại không còn khóa các lần sau; cơ chế cooldown 30 giây tránh gọi GitHub liên tục và cùng một phiên bản chỉ được nhắc một lần trong mỗi phiên chạy ứng dụng.
+
 ## Cập nhật ứng dụng Android
 
-App tự kiểm tra phiên bản Android mới khi khởi động và chỉ hiển thị hộp thoại nếu manifest công bố phiên bản cao hơn bản đang cài. Lần đầu sử dụng, Android/FydeOS có thể yêu cầu cấp quyền **Install unknown apps**; hệ điều hành luôn yêu cầu người dùng xác nhận trước khi cài.
+App tự kiểm tra phiên bản Android mới khi khởi động và khi quay lại foreground, đồng thời chỉ hiển thị hộp thoại nếu manifest công bố phiên bản cao hơn bản đang cài. Lần đầu sử dụng, Android/FydeOS có thể yêu cầu cấp quyền **Install unknown apps**; hệ điều hành luôn yêu cầu người dùng xác nhận trước khi cài.
 
 Android `2.0` là bản đầu tiên dùng release key cố định. Nếu thiết bị đang cài bản `1.9` trở xuống được ký bằng debug key cũ, cần gỡ bản cũ và cài `2.0` một lần. Từ các bản sau có thể cập nhật trực tiếp trong app.
 
