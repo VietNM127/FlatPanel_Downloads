@@ -1,14 +1,14 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.1.1",
+                     "version":  "1.1.2",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.1.1-ota.bin",
-                     "size":  1005920,
-                     "crc32":  "9BEE947E",
-                     "sha256":  "B3922F8153F5D0046ECA5BA3D2285D122B785ED025C1A2A3E1CF97F980169236",
-                     "notes":  "Firmware 1.1.1 adds a shared power interlock so Main Cover and Scope Cover servos never move simultaneously; commands are rejected while the other servo is moving and load-power homing is serialized with Main Cover priority."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.1.2-ota.bin",
+                     "size":  1006112,
+                     "crc32":  "D85890CA",
+                     "sha256":  "49E8954DC16181DBA883379FB5BFA9067AB5EEA1268EFD358D56CFB9E2D1B22E",
+                     "notes":  "Firmware 1.1.2 keeps fallback AP stable when Station Wi-Fi is unavailable and retries Station in the background every five minutes without interrupting AP control."
                  },
     "app":  {
                 "version":  "2.6",
