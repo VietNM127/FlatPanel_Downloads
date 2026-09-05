@@ -4,8 +4,8 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 ## Tải xuống
 
-- [Firmware ESP32 1.2.0 - OTA payload](./FlatPanel-1.2.0-ota.bin)
-- [Firmware ESP32 1.2.0 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.2.0-merged.bin)
+- [Firmware ESP32 1.2.1 - OTA payload](./FlatPanel-1.2.1-ota.bin)
+- [Firmware ESP32 1.2.1 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.2.1-merged.bin)
 - [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
 
 ## Chọn đúng file firmware
@@ -37,6 +37,8 @@ Firmware `1.1.2` giữ SoftAP fallback hoạt động ổn định khi Wi-Fi Sta
 Firmware `1.1.3` dùng trạng thái fallback AP riêng, tránh việc trạng thái radio Station làm khởi tạo lại AP liên tục. Log khởi động cũng hiển thị rõ phiên bản firmware đang chạy.
 
 Firmware `1.2.0` bổ sung web control tích hợp cho iOS và Android. Mở `http://192.168.4.1` khi kết nối FlatPanel AP, hoặc `http://flatpanel.local` khi box kết nối Wi-Fi Station. Web có đầy đủ điều khiển Main Cover, Scope Cover, LED/brightness, Auto Open, close timer, cấu hình hai servo, cấu hình Wi-Fi Station và upload file `*-ota.bin` để cập nhật firmware.
+
+Firmware `1.2.1` sửa JavaScript của web control để Safari/iOS tải được trạng thái, điều khiển và cấu hình thay vì dừng ở trạng thái `Connecting...`.
 
 Android `1.5` thêm cache-buster khi kiểm tra `update-manifest.json`, tránh nhận manifest cũ từ cache GitHub/CDN ngay sau khi phát hành bản mới.
 

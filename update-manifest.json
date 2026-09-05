@@ -1,14 +1,14 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.2.0",
+                     "version":  "1.2.1",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.2.0-ota.bin",
-                     "size":  1050400,
-                     "crc32":  "B25755CA",
-                     "sha256":  "D82A0D581C17B033D90B3DDC8550C5AE0265A929D017CBDD3E3CDE70907B9B6C",
-                     "notes":  "Firmware 1.2.0 adds a built-in responsive web control panel for iOS and Android: Main Cover, Scope Cover, light brightness, automation, timer, servo configuration, Wi-Fi Station setup, and streamed browser firmware upload."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.2.1-ota.bin",
+                     "size":  1049856,
+                     "crc32":  "E9270BE9",
+                     "sha256":  "B145CD493C2E2A53764C6753308D336848E4DE53B8B254EAAA57F887799B2867",
+                     "notes":  "Firmware 1.2.1 fixes the Safari web UI script so status, controls, configuration, Wi-Fi Station setup, and browser OTA upload load correctly. The page is served with no-cache headers after firmware updates."
                  },
     "app":  {
                 "version":  "2.6",
