@@ -1,14 +1,14 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.1.2",
+                     "version":  "1.1.3",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.1.2-ota.bin",
-                     "size":  1006112,
-                     "crc32":  "D85890CA",
-                     "sha256":  "49E8954DC16181DBA883379FB5BFA9067AB5EEA1268EFD358D56CFB9E2D1B22E",
-                     "notes":  "Firmware 1.1.2 keeps fallback AP stable when Station Wi-Fi is unavailable and retries Station in the background every five minutes without interrupting AP control."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.1.3-ota.bin",
+                     "size":  1006224,
+                     "crc32":  "F0E2DB92",
+                     "sha256":  "735574161E045695BD464957569B6160420466BC26EA1996A1F585D1FD8ADD05",
+                     "notes":  "Firmware 1.1.3 keeps the fallback AP stable while Station Wi-Fi is unavailable, with background Station retries every five minutes that do not interrupt AP control."
                  },
     "app":  {
                 "version":  "2.6",

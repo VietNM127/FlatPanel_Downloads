@@ -4,8 +4,8 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 ## Tải xuống
 
-- [Firmware ESP32 1.1.2 - OTA payload](./FlatPanel-1.1.2-ota.bin)
-- [Firmware ESP32 1.1.2 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.1.2-merged.bin)
+- [Firmware ESP32 1.1.3 - OTA payload](./FlatPanel-1.1.3-ota.bin)
+- [Firmware ESP32 1.1.3 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.1.3-merged.bin)
 - [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
 
 ## Chọn đúng file firmware
@@ -33,6 +33,8 @@ Firmware `1.1.0` bổ sung **Scope Cover** dùng servo riêng trên GPIO26. Scop
 Firmware `1.1.1` bổ sung interlock nguồn cho hai servo: Main Cover và Scope Cover không thể chạy đồng thời. Lệnh điều khiển servo còn lại sẽ bị từ chối khi một servo đang chạy; quá trình homing lúc khởi động hoặc khi nguồn tải phục hồi được thực hiện lần lượt, ưu tiên Main Cover.
 
 Firmware `1.1.2` giữ SoftAP fallback hoạt động ổn định khi Wi-Fi Station không có mặt. Sau một đợt kết nối Station thất bại, box tiếp tục cho phép app kết nối tại AP và chỉ thử lại Station sau 5 phút; quá trình thử lại không ngắt AP.
+
+Firmware `1.1.3` dùng trạng thái fallback AP riêng, tránh việc trạng thái radio Station làm khởi tạo lại AP liên tục. Log khởi động cũng hiển thị rõ phiên bản firmware đang chạy.
 
 Android `1.5` thêm cache-buster khi kiểm tra `update-manifest.json`, tránh nhận manifest cũ từ cache GitHub/CDN ngay sau khi phát hành bản mới.
 
