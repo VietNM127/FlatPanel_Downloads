@@ -1,14 +1,14 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.2.1",
+                     "version":  "1.3.6",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.2.1-ota.bin",
-                     "size":  1049856,
-                     "crc32":  "E9270BE9",
-                     "sha256":  "B145CD493C2E2A53764C6753308D336848E4DE53B8B254EAAA57F887799B2867",
-                     "notes":  "Firmware 1.2.1 fixes the Safari web UI script so status, controls, configuration, Wi-Fi Station setup, and browser OTA upload load correctly. The page is served with no-cache headers after firmware updates."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.6-ota.bin",
+                     "size":  1063056,
+                     "crc32":  "0F108AB3",
+                     "sha256":  "1ED178226E45EBBAC65F2B39E729538897BF55BC06AEF72BB5A6DFAEADC3A65D",
+                     "notes":  "Firmware 1.3.6 matches the Android angle-control layout in web Configure: minus button, slider, and plus button on one row for each Main and Scope Open/Closed angle, with live degree/pulse readout."
                  },
     "app":  {
                 "version":  "2.6",

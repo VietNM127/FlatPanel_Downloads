@@ -4,8 +4,8 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 ## Tải xuống
 
-- [Firmware ESP32 1.2.1 - OTA payload](./FlatPanel-1.2.1-ota.bin)
-- [Firmware ESP32 1.2.1 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.2.1-merged.bin)
+- [Firmware ESP32 1.3.6 - OTA payload](./FlatPanel-1.3.6-ota.bin)
+- [Firmware ESP32 1.3.6 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.6-merged.bin)
 - [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
 
 ## Chọn đúng file firmware
@@ -39,6 +39,38 @@ Firmware `1.1.3` dùng trạng thái fallback AP riêng, tránh việc trạng t
 Firmware `1.2.0` bổ sung web control tích hợp cho iOS và Android. Mở `http://192.168.4.1` khi kết nối FlatPanel AP, hoặc `http://flatpanel.local` khi box kết nối Wi-Fi Station. Web có đầy đủ điều khiển Main Cover, Scope Cover, LED/brightness, Auto Open, close timer, cấu hình hai servo, cấu hình Wi-Fi Station và upload file `*-ota.bin` để cập nhật firmware.
 
 Firmware `1.2.1` sửa JavaScript của web control để Safari/iOS tải được trạng thái, điều khiển và cấu hình thay vì dừng ở trạng thái `Connecting...`.
+
+Firmware `1.2.2` tách web thành tab **Console** (trạng thái, điều khiển) và **Configure** (cấu hình, Wi-Fi, OTA), đồng bộ bố cục với app Android.
+
+Firmware `1.2.3` đổi Auto Open và Auto Close trên web thành nút gạt. Auto Close nhận thời gian theo giây và hiển thị đếm ngược chính xác tới giây.
+
+Firmware `1.2.4` khóa các nút điều khiển cover trên web khi một servo đang chạy. Khi cover đã Open chỉ còn nút Close; khi đã Closed chỉ còn nút Open.
+
+Firmware `1.2.5` hiển thị mật khẩu Wi-Fi Station đã lưu ở dạng ẩn và có nút mắt để hiện hoặc ẩn mật khẩu trước khi lưu.
+
+Firmware `1.2.6` thay upload file thủ công trên web bằng kiểm tra cập nhật như app Android: chỉ khả dụng ở Station mode, kiểm tra manifest GitHub và tải/cài OTA khi có bản mới hơn. Web cũng dùng được trên mọi thiết bị có trình duyệt.
+
+Firmware `1.2.7` sửa logic Auto Close trên web: nút gạt chỉ mở hoặc thu gọn vùng điều khiển; timer chỉ bắt đầu khi bấm Start và dừng khi bấm Stop.
+
+Firmware `1.2.8` làm đếm ngược Auto Close trên web mượt như app Android: trình duyệt tự đếm theo mốc thời gian cục bộ và chỉ đồng bộ nhẹ với firmware định kỳ.
+
+Firmware `1.2.9` tăng khoảng cách giữa ô thời gian Auto Close và hai nút Start/Stop trên web.
+
+Firmware `1.2.10` đưa ô số giây Auto Close và hai nút Start/Stop vào cùng một hàng gọn hơn.
+
+Firmware `1.3.0` mở rộng Automation cho cả Main Cover và Scope Cover. Auto Open sau khi nguồn tải trở lại và Auto Close khi timer hết hạn sẽ khởi động đồng thời hai servo; các lệnh điều khiển riêng lẻ vẫn giữ interlock nguồn.
+
+Firmware `1.3.1` hiển thị góc servo trên web giống app Android, theo dạng `độ (pulse µs)` cho Open/Closed của cả hai cover.
+
+Firmware `1.3.2` bổ sung trạng thái và đếm ngược Auto Open trên web, đồng bộ với firmware và hiển thị mượt như app Android.
+
+Firmware `1.3.3` giữ nguyên các thay đổi Wi-Fi Station chưa lưu trên web, tránh checkbox Connect Flat Panel to home Wi-Fi tự bị polling ghi đè trước khi bấm Save.
+
+Firmware `1.3.4` tự chuyển web sang `http://flatpanel.local` sau khi lưu Wi-Fi Station và firmware khởi động lại.
+
+Firmware `1.3.5` làm mới web Console với trạng thái Open/Close màu và ô trạng thái Light; Configure dùng slider góc 0-270° cho cả Main Cover và Scope Cover.
+
+Firmware `1.3.6` đưa mỗi điều chỉnh góc trên web vào một hàng giống app Android: nút giảm, slider và nút tăng; Open/Closed được giữ cách nhau tối thiểu 5 µs.
 
 Android `1.5` thêm cache-buster khi kiểm tra `update-manifest.json`, tránh nhận manifest cũ từ cache GitHub/CDN ngay sau khi phát hành bản mới.
 
