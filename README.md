@@ -4,8 +4,8 @@ Kho phát hành này chỉ chứa các file cần thiết cho người dùng DIY
 
 ## Tải xuống
 
-- [Firmware ESP32 1.3.6 - OTA payload](./FlatPanel-1.3.6-ota.bin)
-- [Firmware ESP32 1.3.6 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.6-merged.bin)
+- [Firmware ESP32 1.3.9 - OTA payload](./FlatPanel-1.3.9-ota.bin)
+- [Firmware ESP32 1.3.9 - ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.9-merged.bin)
 - [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
 
 ## Chọn đúng file firmware
@@ -71,6 +71,12 @@ Firmware `1.3.4` tự chuyển web sang `http://flatpanel.local` sau khi lưu Wi
 Firmware `1.3.5` làm mới web Console với trạng thái Open/Close màu và ô trạng thái Light; Configure dùng slider góc 0-270° cho cả Main Cover và Scope Cover.
 
 Firmware `1.3.6` đưa mỗi điều chỉnh góc trên web vào một hàng giống app Android: nút giảm, slider và nút tăng; Open/Closed được giữ cách nhau tối thiểu 5 µs.
+
+Firmware `1.3.7` sửa mạch nhận biết nguồn tải 12 V tại GPIO4: tắt pull-up nội của ESP32 để cầu chia áp bên ngoài quyết định chính xác trạng thái có/mất nguồn. Serial Monitor nay cũng báo trạng thái nguồn tải lúc khởi động và mỗi khi nó thay đổi.
+
+Firmware `1.3.8` thêm biến cấu hình `ENABLE_SCOPE_COVER`. Với box chỉ có Main Cover, đặt biến này thành `0` trước khi build để web ẩn card điều khiển và card cấu hình Scope Cover. Debug log khởi động cũng xác nhận Scope Cover đang enabled hay disabled.
+
+Firmware `1.3.9` dùng một firmware chung cho mọi box. Trong Web Configure có nút gạt `Scope Cover installed`; cấu hình được lưu trong EEPROM và giữ nguyên sau OTA. Khi tắt, Scope Cover không được khởi tạo hay điều khiển, hai card Scope bị ẩn và Auto Open/Auto Close chỉ tác động Main Cover.
 
 Android `1.5` thêm cache-buster khi kiểm tra `update-manifest.json`, tránh nhận manifest cũ từ cache GitHub/CDN ngay sau khi phát hành bản mới.
 

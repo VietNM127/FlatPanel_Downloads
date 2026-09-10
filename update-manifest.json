@@ -1,14 +1,14 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.3.6",
+                     "version":  "1.3.9",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.6-ota.bin",
-                     "size":  1063056,
-                     "crc32":  "0F108AB3",
-                     "sha256":  "1ED178226E45EBBAC65F2B39E729538897BF55BC06AEF72BB5A6DFAEADC3A65D",
-                     "notes":  "Firmware 1.3.6 matches the Android angle-control layout in web Configure: minus button, slider, and plus button on one row for each Main and Scope Open/Closed angle, with live degree/pulse readout."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.9-ota.bin",
+                     "size":  1061296,
+                     "crc32":  "022B502E",
+                     "sha256":  "C5F5D75089AFA34AEEAC1CE697E880C3524D9A58C1E7E699029A1A67DC27706E",
+                     "notes":  "Firmware 1.3.9 uses one universal firmware. In Web Configure, Scope Cover installed is a saved EEPROM option: turn it off for Main-Cover-only boxes to hide Scope cards and keep Scope servo inactive. Auto Open and Auto Close then operate Main Cover only."
                  },
     "app":  {
                 "version":  "2.6",
