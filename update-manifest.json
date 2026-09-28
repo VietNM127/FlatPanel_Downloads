@@ -15,5 +15,12 @@
                 "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-2.6.apk",
                 "size":  4830754,
                 "sha256":  "895DA7EC238438FC922CEF9183150A542C8B51F3992256C0EA3CA42E1A142686"
-            }
+            },
+    "ascomDriver":  {
+                        "version":  "1.0.16",
+                        "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/DIY-Flat-Panel-ASCOM-Setup-1.0.16.exe",
+                        "size":  2110101,
+                        "sha256":  "7E2F1168819591A169E8D2C4CA307D78573E535C9E442321668B8410E32174C8",
+                        "notes":  "ASCOM driver for N.I.N.A. Includes protected servo setup and serial firmware update."
+                    }
 }
