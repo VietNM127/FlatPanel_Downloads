@@ -1,26 +1,26 @@
 {
-    "schema":  1,
-    "firmware":  {
-                     "version":  "1.3.9",
-                     "model":  "DIY-FLAT-PANEL-ESP32",
-                     "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.9-ota.bin",
-                     "size":  1061296,
-                     "crc32":  "022B502E",
-                     "sha256":  "C5F5D75089AFA34AEEAC1CE697E880C3524D9A58C1E7E699029A1A67DC27706E",
-                     "notes":  "Firmware 1.3.9 uses one universal firmware. In Web Configure, Scope Cover installed is a saved EEPROM option: turn it off for Main-Cover-only boxes to hide Scope cards and keep Scope servo inactive. Auto Open and Auto Close then operate Main Cover only."
-                 },
-    "app":  {
-                "version":  "2.6",
-                "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-2.6.apk",
-                "size":  4830754,
-                "sha256":  "895DA7EC238438FC922CEF9183150A542C8B51F3992256C0EA3CA42E1A142686"
-            },
-    "ascomDriver":  {
-                        "version":  "1.0.16",
-                        "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/DIY-Flat-Panel-ASCOM-Setup-1.0.16.exe",
-                        "size":  2110101,
-                        "sha256":  "7E2F1168819591A169E8D2C4CA307D78573E535C9E442321668B8410E32174C8",
-                        "notes":  "ASCOM driver for N.I.N.A. Includes protected servo setup and serial firmware update."
-                    }
+  "schema": 1,
+  "firmware": {
+    "version": "1.3.10",
+    "model": "DIY-FLAT-PANEL-ESP32",
+    "protocol": 1,
+    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.10-ota.bin",
+    "size": 1066272,
+    "crc32": "F402D000",
+    "sha256": "CE7FDAA603EF974314747A826E3B98E449D45EFD653DC0F980E71863295332A5",
+    "notes": "Sửa lỗi servo nóng khi đứng yên: sau khi Main Cover hoặc Scope Cover chạy xong, firmware tự ngắt xung giữ servo. Servo sẽ tự kích hoạt lại khi có lệnh Open/Close mới."
+  },
+  "app": {
+    "version": "2.6",
+    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/main/DIY-Flat-Panel-Android-2.6.apk",
+    "size": 4830754,
+    "sha256": "895DA7EC238438FC922CEF9183150A542C8B51F3992256C0EA3CA42E1A142686"
+  },
+  "ascomDriver": {
+    "version": "1.0.16",
+    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/DIY-Flat-Panel-ASCOM-Setup-1.0.16.exe",
+    "size": 2110101,
+    "sha256": "7E2F1168819591A169E8D2C4CA307D78573E535C9E442321668B8410E32174C8",
+    "notes": "ASCOM driver for N.I.N.A. Includes protected servo setup and serial firmware update."
+  }
 }

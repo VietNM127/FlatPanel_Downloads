@@ -23,8 +23,8 @@ Driver ASCOM dành cho người dùng muốn điều khiển Main Cover và Flat
 
 ## Tải xuống
 
-- [Firmware ESP32 1.3.9 — OTA payload](./FlatPanel-1.3.9-ota.bin)
-- [Firmware ESP32 1.3.9 — ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.9-merged.bin)
+- [Firmware ESP32 1.3.10 — dùng để cập nhật OTA](./FlatPanel-1.3.10-ota.bin)
+- [Firmware ESP32 1.3.10 — ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.10-merged.bin)
 - [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
 - [DIY Flat Panel ASCOM Driver 1.0.16](./DIY-Flat-Panel-ASCOM-Setup-1.0.16.exe)
 
@@ -70,8 +70,15 @@ Driver ASCOM cũng có công cụ cập nhật qua cáp USB trong Setup → **Fi
 
 Firmware chỉ hỗ trợ ESP32; nhánh ESP8266 đã ngừng phát triển.
 
+### Có gì mới ở firmware 1.3.10
+
+- Sửa lỗi servo nóng khi cover đã mở hoặc đóng xong: box tự ngắt xung điều khiển sau khi servo ổn định.
+- Áp dụng cho cả Main Cover và Scope Cover.
+- Khi có lệnh Open/Close mới, servo sẽ tự được kích hoạt lại trước khi chạy.
+
 ## Lưu ý an toàn
 
 - Không ngắt nguồn khi servo đang chạy hoặc khi firmware đang cập nhật.
+- Firmware 1.3.10 không giữ lực servo liên tục sau khi cover dừng, nhằm tránh quá nhiệt. Không tác động mạnh vào cover khi servo đang ở trạng thái nghỉ.
 - Khi cập nhật, giữ Wi-Fi/USB ổn định đến khi Flat Panel tự khởi động lại.
 - Main Cover và Scope Cover có cơ chế chặn để không chạy riêng lẻ cùng lúc.
