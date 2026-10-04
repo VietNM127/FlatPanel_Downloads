@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "firmware": {
-    "version": "1.3.10",
+    "version": "1.3.11",
     "model": "DIY-FLAT-PANEL-ESP32",
     "protocol": 1,
-    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.10-ota.bin",
+    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.11-ota.bin",
     "size": 1066272,
-    "crc32": "F402D000",
-    "sha256": "CE7FDAA603EF974314747A826E3B98E449D45EFD653DC0F980E71863295332A5",
-    "notes": "Fixes servo overheating while idle. PWM is released after Main Cover or Scope Cover stops, then restored automatically for the next Open or Close command."
+    "crc32": "13D7A122",
+    "sha256": "C0BE48075031A00511C60B899B13C6920681BBE12C95D72CAECF349D2EDF069F",
+    "notes": "Speeds up USB ASCOM updates with 115200 baud and 1024-byte transfer chunks. The ASCOM driver still supports legacy 9600 baud firmware."
   },
   "app": {
     "version": "2.6",
@@ -17,10 +17,10 @@
     "sha256": "895DA7EC238438FC922CEF9183150A542C8B51F3992256C0EA3CA42E1A142686"
   },
   "ascomDriver": {
-    "version": "1.0.16",
-    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/DIY-Flat-Panel-ASCOM-Setup-1.0.16.exe",
-    "size": 2110101,
-    "sha256": "7E2F1168819591A169E8D2C4CA307D78573E535C9E442321668B8410E32174C8",
-    "notes": "ASCOM driver for N.I.N.A. Includes protected servo setup and serial firmware update."
+    "version": "1.0.17",
+    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/DIY-Flat-Panel-ASCOM-Setup-1.0.17.exe",
+    "size": 2110357,
+    "sha256": "8257AE6B9382E111EF40BAE5D13C557F91ECCBCD84AE28A11E434B577439DEA0",
+    "notes": "ASCOM driver with 115200 baud USB updates and automatic 9600 baud fallback for legacy firmware."
   }
 }
