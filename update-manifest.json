@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "firmware": {
-    "version": "1.3.11",
+    "version": "1.3.12",
     "model": "DIY-FLAT-PANEL-ESP32",
     "protocol": 1,
-    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.11-ota.bin",
-    "size": 1066272,
-    "crc32": "13D7A122",
-    "sha256": "C0BE48075031A00511C60B899B13C6920681BBE12C95D72CAECF349D2EDF069F",
-    "notes": "Speeds up USB ASCOM updates with 115200 baud and 1024-byte transfer chunks. The ASCOM driver still supports legacy 9600 baud firmware."
+    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.12-ota.bin",
+    "size": 1066304,
+    "crc32": "FD7EBB3B",
+    "sha256": "87861E420FF7393AB2B968D21633798BB3048CE902CFBDE07DFA93F595ECD4F7",
+    "notes": "Further servo idle safety: after PWM detach, Main and Scope signal pins are driven LOW to prevent floating-input buzzing. If buzzing continues, servo power must be switched off by hardware."
   },
   "app": {
     "version": "2.6",
