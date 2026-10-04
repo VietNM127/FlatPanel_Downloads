@@ -23,8 +23,8 @@ Driver ASCOM dành cho người dùng muốn điều khiển Main Cover và Flat
 
 ## Tải xuống
 
-- [Firmware ESP32 1.3.12 — dùng để cập nhật OTA](./FlatPanel-1.3.12-ota.bin)
-- [Firmware ESP32 1.3.12 — ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.12-merged.bin)
+- [Firmware ESP32 1.3.14 — dùng để cập nhật OTA](./FlatPanel-1.3.14-ota.bin)
+- [Firmware ESP32 1.3.14 — ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.14-merged.bin)
 - [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
 - [DIY Flat Panel ASCOM Driver 1.0.17](./DIY-Flat-Panel-ASCOM-Setup-1.0.17.exe)
 
@@ -72,17 +72,16 @@ Nếu dùng N.I.N.A./ASCOM, hãy cài **ASCOM Driver 1.0.17** trước khi cập
 
 Firmware chỉ hỗ trợ ESP32; nhánh ESP8266 đã ngừng phát triển.
 
-### Có gì mới ở firmware 1.3.12
+### Có gì mới ở firmware 1.3.14
 
-- Sau khi cover dừng, box nhả PWM **và ép chân tín hiệu servo xuống LOW** để tránh input trôi làm servo rè hoặc giữ lực.
+- Giữ PWM servo liên tục khi cover đứng yên, loại bỏ hiện tượng servo giật khi nhả rồi gắn lại tín hiệu.
+- Để tránh servo rè và nóng, cần đặt góc mở/đóng dừng trước điểm chặn cơ khí; không đặt góc servo sát hard-stop.
 - Bao gồm tăng tốc cập nhật USB của 1.3.11: serial 115200 baud và gói dữ liệu 1024 byte.
-- Driver ASCOM 1.0.17 tự dùng 115200 với firmware mới, đồng thời vẫn tự thử 9600 để cập nhật box đang chạy firmware cũ.
 
 ## Lưu ý an toàn
 
 - Không ngắt nguồn khi servo đang chạy hoặc khi firmware đang cập nhật.
-- Firmware 1.3.12 nhả PWM và đưa chân tín hiệu servo về LOW sau khi cover dừng. Không tác động mạnh vào cover khi servo đang ở trạng thái nghỉ.
-- Nếu servo vẫn rè hoặc nóng sau 1.3.12, servo đang tự giữ lực dù không còn tín hiệu. Khi đó cần cắt nguồn V+ servo bằng phần cứng; không tiếp tục vận hành trong tình trạng nóng.
+- Không đặt góc mở hoặc đóng chạm điểm chặn cơ khí. Servo bị kẹt sẽ tiếp tục kéo, gây tiếng rè và nóng nhanh. Với thang 500–2500 µs tương ứng 0–270°, nên chừa ít nhất 5° trước điểm chặn; nếu điểm chặn thực tế là 267°, hãy bắt đầu thử ở khoảng 2450 µs (xấp xỉ 263°) rồi tinh chỉnh dần.
 - Từ firmware 1.3.11, Serial Monitor hoặc công cụ USB Serial thủ công phải đặt tốc độ `115200 baud`. Website và ứng dụng Android không bị ảnh hưởng.
 - Khi cập nhật, giữ Wi-Fi/USB ổn định đến khi Flat Panel tự khởi động lại.
 - Main Cover và Scope Cover có cơ chế chặn để không chạy riêng lẻ cùng lúc.
