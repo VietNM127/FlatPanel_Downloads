@@ -8,7 +8,7 @@
     "size": 1066272,
     "crc32": "F402D000",
     "sha256": "CE7FDAA603EF974314747A826E3B98E449D45EFD653DC0F980E71863295332A5",
-    "notes": "Sửa lỗi servo nóng khi đứng yên: sau khi Main Cover hoặc Scope Cover chạy xong, firmware tự ngắt xung giữ servo. Servo sẽ tự kích hoạt lại khi có lệnh Open/Close mới."
+    "notes": "Fixes servo overheating while idle. PWM is released after Main Cover or Scope Cover stops, then restored automatically for the next Open or Close command."
   },
   "app": {
     "version": "2.6",
