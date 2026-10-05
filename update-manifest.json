@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "firmware": {
-    "version": "1.3.14",
+    "version": "1.3.16",
     "model": "DIY-FLAT-PANEL-ESP32",
     "protocol": 1,
-    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.14-ota.bin",
-    "size": 1065776,
-    "crc32": "F48DC647",
-    "sha256": "BF36D507912F4AA05B53054F9EFAAD0A145E78E190AACFF8ACD7646141A16EAF",
-    "notes": "Restores continuous servo PWM to eliminate reattach jumps. Configure open and closed pulses below physical end stops to prevent servo stall, buzzing and heat."
+    "url": "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.16-ota.bin",
+    "size": 1065872,
+    "crc32": "EF2D074C",
+    "sha256": "AF8EE61D18A65560D46B17091B7CE11AC7A5467A23F8A0FE2691856B9E7EB775",
+    "notes": "Preserves a stationary cover's saved Open or Closed state across load-power loss or reboot. Only an interrupted move is marked unknown and safely homed closed."
   },
   "app": {
     "version": "2.6",

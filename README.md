@@ -23,8 +23,8 @@ Driver ASCOM dành cho người dùng muốn điều khiển Main Cover và Flat
 
 ## Tải xuống
 
-- [Firmware ESP32 1.3.14 — dùng để cập nhật OTA](./FlatPanel-1.3.14-ota.bin)
-- [Firmware ESP32 1.3.14 — ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.14-merged.bin)
+- [Firmware ESP32 1.3.16 — dùng để cập nhật OTA](./FlatPanel-1.3.16-ota.bin)
+- [Firmware ESP32 1.3.16 — ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.16-merged.bin)
 - [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
 - [DIY Flat Panel ASCOM Driver 1.0.17](./DIY-Flat-Panel-ASCOM-Setup-1.0.17.exe)
 
@@ -72,8 +72,10 @@ Nếu dùng N.I.N.A./ASCOM, hãy cài **ASCOM Driver 1.0.17** trước khi cập
 
 Firmware chỉ hỗ trợ ESP32; nhánh ESP8266 đã ngừng phát triển.
 
-### Có gì mới ở firmware 1.3.14
+### Có gì mới ở firmware 1.3.16
 
+- Giữ nguyên trạng thái Open/Closed khi nguồn tải 12 V hoặc box được cấp lại nguồn, miễn là nguồn không bị mất giữa lúc servo đang chạy. Cover đang Open sẽ không tự đóng.
+- Nếu nguồn mất khi servo đang chạy, vị trí thực tế không còn chắc chắn nên firmware vẫn homing về đóng để an toàn.
 - Giữ PWM servo liên tục khi cover đứng yên, loại bỏ hiện tượng servo giật khi nhả rồi gắn lại tín hiệu.
 - Để tránh servo rè và nóng, cần đặt góc mở/đóng dừng trước điểm chặn cơ khí; không đặt góc servo sát hard-stop.
 - Bao gồm tăng tốc cập nhật USB của 1.3.11: serial 115200 baud và gói dữ liệu 1024 byte.
