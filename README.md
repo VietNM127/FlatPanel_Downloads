@@ -23,10 +23,10 @@ Driver ASCOM dành cho người dùng muốn điều khiển Main Cover và Flat
 
 ## Tải xuống
 
-- [Firmware ESP32 1.3.18 — dùng để cập nhật OTA](./FlatPanel-1.3.18-ota.bin)
-- [Firmware ESP32 1.3.18 — ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.18-merged.bin)
+- [Firmware ESP32 1.3.22 — dùng để cập nhật OTA](./FlatPanel-1.3.22-ota.bin)
+- [Firmware ESP32 1.3.22 — ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.22-merged.bin)
 - [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
-- [DIY Flat Panel ASCOM Driver 1.0.17](./DIY-Flat-Panel-ASCOM-Setup-1.0.17.exe)
+- [DIY Flat Panel ASCOM Driver 1.0.18](./DIY-Flat-Panel-ASCOM-Setup-1.0.18.exe)
 
 ## Bắt đầu bằng website
 
@@ -50,7 +50,9 @@ Nếu box chỉ có Main Cover, tắt **Scope Cover installed** trong tab Config
 3. Kết nối box với PC qua USB và Connect trong N.I.N.A.
 4. Nút bánh răng của driver mở Setup để chỉnh góc Open/Closed và tốc độ Main Cover.
 
-Setup tự đọc cấu hình servo từ box. **Save & Apply** chỉ bật khi có thay đổi, nhằm tránh vô tình ghi đè cấu hình đã tinh chỉnh. Scope Cover là app/web-only và không được N.I.N.A. điều khiển.
+Setup tự đọc cấu hình servo từ box và tự đọc lại khi đổi COM/Auto-detect. Nếu không đọc được box, vùng servo bị khóa nhưng vẫn có thể **Save** lựa chọn COM hoặc Auto-detect vào driver. **Save & Apply** chỉ gửi cấu hình servo đã thay đổi; không có thay đổi thì Save đóng cửa sổ như Cancel. Scope Cover là app/web-only và không được N.I.N.A. điều khiển.
+
+Driver 1.0.18 sửa lỗi không lưu được COM khi đổi cổng USB. Chế độ Auto-detect cũng được giữ nguyên sau khi kết nối thành công, giúp driver tìm lại box khi Windows đổi số COM.
 
 ## Cập nhật firmware
 
@@ -63,7 +65,7 @@ Cách khuyến nghị là cập nhật từ website khi Flat Panel đang ở **S
 
 Driver ASCOM cũng có công cụ cập nhật qua cáp USB trong Setup → **Firmware Update**.
 
-Nếu dùng N.I.N.A./ASCOM, hãy cài **ASCOM Driver 1.0.17** trước khi cập nhật box lên firmware 1.3.11. Driver 1.0.16 chỉ dùng serial 9600 baud nên không kết nối lại được sau khi firmware mới đã chuyển sang 115200 baud.
+Nếu dùng N.I.N.A./ASCOM, hãy cài **ASCOM Driver 1.0.17 trở lên** (khuyến nghị bản 1.0.18 ở trên) trước khi cập nhật box lên firmware 1.3.11 trở lên. Driver 1.0.16 chỉ dùng serial 9600 baud nên không kết nối lại được sau khi firmware mới đã chuyển sang 115200 baud.
 
 ### Nếu flash firmware thủ công, chọn đúng file firmware
 
@@ -72,8 +74,10 @@ Nếu dùng N.I.N.A./ASCOM, hãy cài **ASCOM Driver 1.0.17** trước khi cập
 
 Firmware chỉ hỗ trợ ESP32; nhánh ESP8266 đã ngừng phát triển.
 
-### Có gì mới ở firmware 1.3.18
+### Có gì mới ở firmware 1.3.22
 
+- Giảm tốc Fast cho cả Main Cover và Scope Cover: toàn hành trình 0–270° (500–2500 µs) có thời gian lệnh Slow 6 giây, Medium 3 giây, Fast 2 giây. Hành trình theo góc đã tinh chỉnh ngắn hơn sẽ mất ít thời gian tương ứng. Vẫn cập nhật vị trí mỗi 20 ms và giữ nguyên góc đã lưu.
+- Giữ chân điều khiển LED ở mức LOW ngay đầu quá trình khởi tạo và chỉ khởi tạo PWM khi có lệnh bật đèn. Khi tắt đèn, ngắt đầu ra PWM và ép về LOW. Mạch vẫn cần điện trở Gate–Source 10 kΩ để giữ MOSFET tắt trước khi firmware chạy.
 - Sửa lỗi vòng lặp cập nhật servo ghi đè trạng thái Open/Closed thành Unknown khi nguồn tải mất, khiến nắp đã mở tự đóng khi nguồn trở lại. Áp dụng cho cả Main Cover và Scope Cover.
 - Trạng thái Open hoặc Closed hợp lệ luôn được khôi phục nguyên trạng. Firmware chỉ homing khi trạng thái đã lưu là Moving/Unknown.
 - Firmware commit trạng thái Moving/Unknown ngay khi bắt đầu chạy, nên nếu nguồn mất giữa lúc servo đang chạy thì lần khởi động sau vẫn homing về Closed để an toàn.
