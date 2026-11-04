@@ -1,94 +1,19 @@
-# DIY Flat Panel
+# DIY Flat Panel Downloads
 
-DIY Flat Panel là Flat Panel / Cover Controller dùng ESP32. Sản phẩm mặc định được điều khiển bằng **website tích hợp sẵn trong box**; không cần cài ứng dụng để sử dụng hằng ngày.
+Trang tải firmware, ASCOM driver và hướng dẫn sử dụng cho DIY Flat Panel.
 
-## Chọn cách điều khiển
-
-### Website — cách dùng mặc định
-
-Website dùng được trên iPhone, iPad, Android, Windows, macOS, TV và mọi thiết bị có trình duyệt.
-
-- Khi kết nối vào Wi-Fi của Flat Panel (AP mode), mở: `http://192.168.4.1`
-- Khi Flat Panel đã kết nối Wi-Fi nhà (Station mode), mở: `http://flatpanel.local`
-
-Website có điều khiển Main Cover, Scope Cover (nếu có), đèn Flat Panel, độ sáng, Auto Open, Auto Close, cấu hình servo, Wi-Fi Station và cập nhật firmware.
-
-### Ứng dụng Android — tùy chọn
-
-Ứng dụng Android dành cho người dùng muốn điều khiển bằng app thay vì website. Không bắt buộc phải cài.
-
-### Driver ASCOM — dành cho N.I.N.A.
-
-Driver ASCOM dành cho người dùng muốn điều khiển Main Cover và Flat Panel Light từ N.I.N.A. trên Windows.
+**Mặc định điều khiển bằng website trong box, không cần cài ứng dụng.** Mở `http://192.168.4.1` khi kết nối Wi-Fi của box, hoặc `http://flatpanel.local` khi box và thiết bị điều khiển cùng Wi-Fi nhà.
+Nếu dùng trên N.I.N.A thì cần tải và cài driver bên dưới.
 
 ## Tải xuống
 
-- [Firmware ESP32 1.3.22 — dùng để cập nhật OTA](./FlatPanel-1.3.22-ota.bin)
-- [Firmware ESP32 1.3.22 — ảnh flash đầy đủ 4 MB](./FlatPanel-1.3.22-merged.bin)
-- [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk)
-- [DIY Flat Panel ASCOM Driver 1.0.18](./DIY-Flat-Panel-ASCOM-Setup-1.0.18.exe)
+- [ASCOM Driver 1.0.18](./DIY-Flat-Panel-ASCOM-Setup-1.0.18.exe) — dùng với N.I.N.A. trên Windows.
+- [Ứng dụng Android 2.6](./DIY-Flat-Panel-Android-2.6.apk) — tùy chọn, không bắt buộc.
+- [Hướng dẫn sử dụng tiếng Việt](./USER_GUIDE_VI.md)
 
-## Bắt đầu bằng website
+## Firmware hiện tại
 
-1. Cấp nguồn cho DIY Flat Panel.
-2. Trên điện thoại hoặc máy tính, kết nối Wi-Fi `FlatPanel_v1` nếu box chưa được cấu hình Wi-Fi nhà.
-3. Mở `http://192.168.4.1`.
-4. Trong tab **Configure**, có thể cấu hình Wi-Fi Station để lần sau mở nhanh bằng `http://flatpanel.local`.
+- [Firmware Flat Panel 1.3.23 OTA payload](./FlatPanel-1.3.23-ota.bin)
+- [Firmware Flat Panel 1.3.23 merged image](./FlatPanel-1.3.23-merged.bin)
 
-Nếu box chỉ có Main Cover, tắt **Scope Cover installed** trong tab Configure. Thiết lập này được lưu trong box và Scope Cover sẽ được ẩn đi.
-
-## Dùng ứng dụng Android
-
-1. Tải và cài file APK Android ở trên.
-2. Lần cài đầu, Android có thể yêu cầu cho phép **Install unknown apps**.
-3. Kết nối điện thoại với Flat Panel qua AP hoặc cùng Wi-Fi Station, rồi mở app và kết nối thiết bị.
-
-## Dùng với N.I.N.A.
-
-1. Đóng N.I.N.A. và chạy file cài **DIY Flat Panel ASCOM Driver** bằng quyền Administrator.
-2. Mở N.I.N.A., tại Flat Panel chọn **Viet DIY Flat Panel**.
-3. Kết nối box với PC qua USB và Connect trong N.I.N.A.
-4. Nút bánh răng của driver mở Setup để chỉnh góc Open/Closed và tốc độ Main Cover.
-
-Setup tự đọc cấu hình servo từ box và tự đọc lại khi đổi COM/Auto-detect. Nếu không đọc được box, vùng servo bị khóa nhưng vẫn có thể **Save** lựa chọn COM hoặc Auto-detect vào driver. **Save & Apply** chỉ gửi cấu hình servo đã thay đổi; không có thay đổi thì Save đóng cửa sổ như Cancel. Scope Cover là app/web-only và không được N.I.N.A. điều khiển.
-
-Driver 1.0.18 sửa lỗi không lưu được COM khi đổi cổng USB. Chế độ Auto-detect cũng được giữ nguyên sau khi kết nối thành công, giúp driver tìm lại box khi Windows đổi số COM.
-
-## Cập nhật firmware
-
-Cách khuyến nghị là cập nhật từ website khi Flat Panel đang ở **Station mode**:
-
-1. Mở `http://flatpanel.local`.
-2. Vào **Configure** → **Firmware Update**.
-3. Kiểm tra bản mới và xác nhận cập nhật.
-4. Giữ nguyên nguồn và Wi-Fi cho tới khi box tự khởi động lại.
-
-Driver ASCOM cũng có công cụ cập nhật qua cáp USB trong Setup → **Firmware Update**.
-
-Nếu dùng N.I.N.A./ASCOM, hãy cài **ASCOM Driver 1.0.17 trở lên** (khuyến nghị bản 1.0.18 ở trên) trước khi cập nhật box lên firmware 1.3.11 trở lên. Driver 1.0.16 chỉ dùng serial 9600 baud nên không kết nối lại được sau khi firmware mới đã chuyển sang 115200 baud.
-
-### Nếu flash firmware thủ công, chọn đúng file firmware
-
-- `FlatPanel-*-ota.bin`: chỉ dùng cho cập nhật OTA. Không flash file này tại địa chỉ `0x0`.
-- `FlatPanel-*-merged.bin`: ảnh flash đầy đủ 4 MB, dùng khi nạp lần đầu hoặc khôi phục qua USB/esptool tại địa chỉ `0x0`.
-
-Firmware chỉ hỗ trợ ESP32; nhánh ESP8266 đã ngừng phát triển.
-
-### Có gì mới ở firmware 1.3.22
-
-- Giảm tốc Fast cho cả Main Cover và Scope Cover: toàn hành trình 0–270° (500–2500 µs) có thời gian lệnh Slow 6 giây, Medium 3 giây, Fast 2 giây. Hành trình theo góc đã tinh chỉnh ngắn hơn sẽ mất ít thời gian tương ứng. Vẫn cập nhật vị trí mỗi 20 ms và giữ nguyên góc đã lưu.
-- Giữ chân điều khiển LED ở mức LOW ngay đầu quá trình khởi tạo và chỉ khởi tạo PWM khi có lệnh bật đèn. Khi tắt đèn, ngắt đầu ra PWM và ép về LOW. Mạch vẫn cần điện trở Gate–Source 10 kΩ để giữ MOSFET tắt trước khi firmware chạy.
-- Sửa lỗi vòng lặp cập nhật servo ghi đè trạng thái Open/Closed thành Unknown khi nguồn tải mất, khiến nắp đã mở tự đóng khi nguồn trở lại. Áp dụng cho cả Main Cover và Scope Cover.
-- Trạng thái Open hoặc Closed hợp lệ luôn được khôi phục nguyên trạng. Firmware chỉ homing khi trạng thái đã lưu là Moving/Unknown.
-- Firmware commit trạng thái Moving/Unknown ngay khi bắt đầu chạy, nên nếu nguồn mất giữa lúc servo đang chạy thì lần khởi động sau vẫn homing về Closed để an toàn.
-- Giữ PWM servo liên tục khi cover đứng yên, loại bỏ hiện tượng servo giật khi nhả rồi gắn lại tín hiệu.
-- Để tránh servo rè và nóng, cần đặt góc mở/đóng dừng trước điểm chặn cơ khí; không đặt góc servo sát hard-stop.
-- Bao gồm tăng tốc cập nhật USB của 1.3.11: serial 115200 baud và gói dữ liệu 1024 byte.
-
-## Lưu ý an toàn
-
-- Không ngắt nguồn khi servo đang chạy hoặc khi firmware đang cập nhật.
-- Không đặt góc mở hoặc đóng chạm điểm chặn cơ khí. Servo bị kẹt sẽ tiếp tục kéo, gây tiếng rè và nóng nhanh. Với thang 500–2500 µs tương ứng 0–270°, nên chừa ít nhất 5° trước điểm chặn; nếu điểm chặn thực tế là 267°, hãy bắt đầu thử ở khoảng 2450 µs (xấp xỉ 263°) rồi tinh chỉnh dần.
-- Từ firmware 1.3.11, Serial Monitor hoặc công cụ USB Serial thủ công phải đặt tốc độ `115200 baud`. Website và ứng dụng Android không bị ảnh hưởng.
-- Khi cập nhật, giữ Wi-Fi/USB ổn định đến khi Flat Panel tự khởi động lại.
-- Main Cover và Scope Cover có cơ chế chặn để không chạy riêng lẻ cùng lúc.
+Các file firmware này phục vụ backup và cập nhật; người dùng mới không cần tải thủ công. Cập nhật từ website ở **Configure → Firmware Update** (Wi-Fi nhà / Station mode), hoặc **Firmware Update...** trong Setup của driver ASCOM.
