@@ -1,14 +1,14 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.3.23",
+                     "version":  "1.3.24",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.23-ota.bin",
-                     "size":  1066272,
-                     "crc32":  "ECCBE76B",
-                     "sha256":  "3C93A1289B61AB2C229D855370E90ADD2C65659DE1D2B90387A820C8B0332FFA",
-                     "notes":  "Adds identical LED PWM on GPIO23 alongside GPIO25. Connect the MOSFET gate to either GPIO, never join the two GPIO outputs. Scope Cover uses GPIO32 as configured in this hardware revision."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.24-ota.bin",
+                     "size":  1067008,
+                     "crc32":  "4A100135",
+                     "sha256":  "F445624D849AA4ED37D8C936D915A52828AD2FDDFF4EE9D747319DBA1143EC4C",
+                     "notes":  "Limits pinch and double-tap zoom on touch devices while preserving scrolling, sliders and desktop browser zoom."
                  },
     "app":  {
                 "version":  "2.6",
@@ -17,10 +17,10 @@
                 "sha256":  "895DA7EC238438FC922CEF9183150A542C8B51F3992256C0EA3CA42E1A142686"
             },
     "ascomDriver":  {
-                        "version":  "1.0.18",
-                        "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/DIY-Flat-Panel-ASCOM-Setup-1.0.18.exe",
-                        "size":  2110844,
-                        "sha256":  "25EA5E2C408720545C1E0D67264DCAA09B5834417C09A56D5DEDAC56F0DA56C8",
-                        "notes":  "Saves COM-port and auto-detect choices independently of servo configuration. Servo edits require a successful read from the selected box, and unchanged settings are not rewritten."
+                        "version":  "1.0.19",
+                        "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/DIY-Flat-Panel-ASCOM-Setup-1.0.19.exe",
+                        "size":  2111810,
+                        "sha256":  "45087AAA5330CCDDC962481BD7F9064315643E34CAD3A6D10A6745EEFF1BAB1E",
+                        "notes":  "Hold Shift while clicking Firmware Update to select a local Flat Panel OTA payload. Normal clicks keep online updates. Local mode works offline and rejects merged images and incompatible ESP32 chip images."
                     }
 }

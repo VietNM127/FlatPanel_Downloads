@@ -2,7 +2,7 @@
 
 Tài liệu này dành cho người dùng cuối. DIY Flat Panel mặc định được điều khiển bằng **website tích hợp sẵn trong box**; không cần cài ứng dụng để sử dụng hằng ngày.
 
-Phiên bản hiện tại: firmware `1.3.23`, ASCOM driver `1.0.18`, ứng dụng Android `2.6`. Các file tải xuống nằm tại [trang tải DIY Flat Panel](./README.md).
+Phiên bản hiện tại: firmware `1.3.24`, ASCOM driver `1.0.19`, ứng dụng Android `2.6`. Các file tải xuống nằm tại [trang tải DIY Flat Panel](./README.md).
 
 ## 1. Chọn cách điều khiển
 
@@ -59,6 +59,8 @@ Cách khuyến nghị là cập nhật từ website khi Flat Panel đang ở **S
 4. Giữ nguyên nguồn và Wi-Fi cho tới khi box tự khởi động lại.
 
 Driver ASCOM cũng có công cụ cập nhật qua cáp USB trong Setup → **Firmware Update**.
+
+Từ driver **1.0.19**, giữ **Shift** khi bấm **Firmware Update...** để chọn firmware trên máy: bấm **Browse...**, chọn file `FlatPanel-...-ota.bin`, rồi **Install Local File**. Chế độ này không cần Internet và cho phép cài lại/hạ phiên bản. Chỉ dùng firmware DIY Flat Panel; không chọn `merged.bin` hay firmware DIY EAF. Bấm bình thường vẫn cập nhật online như trước.
 
 Nếu đang dùng ASCOM driver 1.0.16 hoặc cũ hơn, cài driver mới tại [trang tải](./README.md) trước khi cập nhật firmware. Firmware từ 1.3.11 dùng Serial 115200 baud; driver 1.0.17 trở lên hỗ trợ tốc độ này.
 
