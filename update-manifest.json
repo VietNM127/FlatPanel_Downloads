@@ -1,14 +1,14 @@
 {
     "schema":  1,
     "firmware":  {
-                     "version":  "1.3.28",
+                     "version":  "1.3.29",
                      "model":  "DIY-FLAT-PANEL-ESP32",
                      "protocol":  1,
-                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.28-ota.bin",
-                     "size":  1076192,
-                     "crc32":  "CF62D20F",
-                     "sha256":  "E5DE061A3AF670A23986550DC95A15094C4304DCEC8230F6A712C78300C14113",
-                     "notes":  "Closes setup AP 30 seconds after Station receives an IP address. Shows the AP shutdown countdown and home Wi-Fi transition instructions. Reopens the setup AP automatically on Station disconnection, and keeps AP available during setup or failed attempts."
+                     "url":  "https://raw.githubusercontent.com/VietNM127/FlatPanel_Downloads/refs/heads/main/FlatPanel-1.3.29-ota.bin",
+                     "size":  1078560,
+                     "crc32":  "25E035DC",
+                     "sha256":  "8D2CE340A0B5A0D3C17A28FEB156A37D3EE2BF07C9F70B1DD1A1A5F3F8FD938D",
+                     "notes":  "Recovers invalid factory MAC using a per-device locally administered base MAC saved in NVS before Wi-Fi starts. Reuses the saved MAC across reboot and future compatible OTA updates; healthy factory MACs remain unchanged. No eFuse writes. Connection details show the active Station MAC and its source."
                  },
     "app":  {
                 "version":  "2.6",

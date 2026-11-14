@@ -2,7 +2,7 @@
 
 Tài liệu này dành cho người dùng cuối. DIY Flat Panel mặc định được điều khiển bằng **website tích hợp sẵn trong box**; không cần cài ứng dụng để sử dụng hằng ngày.
 
-Phiên bản hiện tại: firmware `1.3.28`, ASCOM driver `1.0.19`, ứng dụng Android `2.6`. Các file tải xuống nằm tại [trang tải DIY Flat Panel](./README.md).
+Phiên bản hiện tại: firmware `1.3.29`, ASCOM driver `1.0.19`, ứng dụng Android `2.6`. Các file tải xuống nằm tại [trang tải DIY Flat Panel](./README.md).
 
 ## 1. Chọn cách điều khiển
 
@@ -82,3 +82,5 @@ Nếu đang dùng ASCOM driver 1.0.16 hoặc cũ hơn, cài driver mới tại [
 - Từ firmware 1.3.11, Serial Monitor hoặc công cụ USB Serial thủ công phải đặt tốc độ `115200 baud`. Website và ứng dụng Android không bị ảnh hưởng.
 - Khi cập nhật, giữ nguồn và Wi-Fi/USB ổn định đến khi Flat Panel tự khởi động lại, rồi kết nối lại nếu cần.
 - Điều khiển thủ công chỉ chạy từng cover; Auto Open/Auto Close có thể chạy hai cover cùng lúc nếu box đã bật Scope Cover.
+- Từ 1.3.29, nếu MAC gốc của chip không hợp lệ (ví dụ toàn số 0), firmware tạo MAC thay thế riêng và lưu trong NVS trước khi bật Wi-Fi. Board có MAC gốc hợp lệ không bị thay đổi. Xem **Connection details → STA MAC**, nguồn `recovered-nvs` nghĩa là đang dùng MAC thay thế. Đây chỉ là giải pháp thử phục hồi địa chỉ mạng, không bảo đảm sửa được phần cứng Wi-Fi bị hỏng.
+- MAC thay thế giữ nguyên qua tắt/bật nguồn và OTA sang các bản tiếp tục hỗ trợ cơ chế này. **Không xóa flash/NVS hoặc nạp lại merged image** nếu muốn giữ nguyên MAC thay thế; hãy cập nhật bằng OTA payload (qua Wi-Fi hoặc công cụ serial của driver). Hạ về firmware trước 1.3.29 sẽ không áp dụng MAC thay thế dù dữ liệu NVS còn. `esptool read-mac` vẫn đọc MAC gốc trong eFuse nên có thể tiếp tục hiện toàn số 0.
