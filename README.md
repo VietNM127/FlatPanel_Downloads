@@ -13,7 +13,7 @@ Nếu dùng trên N.I.N.A thì cần tải và cài driver bên dưới.
 
 ## Firmware hiện tại
 
-- [Firmware Flat Panel 1.3.24 OTA payload](./FlatPanel-1.3.24-ota.bin)
-- [Firmware Flat Panel 1.3.24 merged image](./FlatPanel-1.3.24-merged.bin)
+- [Firmware Flat Panel 1.3.27 OTA payload](./FlatPanel-1.3.27-ota.bin)
+- [Firmware Flat Panel 1.3.27 merged image](./FlatPanel-1.3.27-merged.bin)
 
 Các file firmware này phục vụ backup và cập nhật; người dùng mới không cần tải thủ công. Cập nhật từ website ở **Configure → Firmware Update** (Wi-Fi nhà / Station mode), hoặc **Firmware Update...** trong Setup của driver ASCOM.

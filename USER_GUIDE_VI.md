@@ -2,7 +2,7 @@
 
 Tài liệu này dành cho người dùng cuối. DIY Flat Panel mặc định được điều khiển bằng **website tích hợp sẵn trong box**; không cần cài ứng dụng để sử dụng hằng ngày.
 
-Phiên bản hiện tại: firmware `1.3.24`, ASCOM driver `1.0.19`, ứng dụng Android `2.6`. Các file tải xuống nằm tại [trang tải DIY Flat Panel](./README.md).
+Phiên bản hiện tại: firmware `1.3.27`, ASCOM driver `1.0.19`, ứng dụng Android `2.6`. Các file tải xuống nằm tại [trang tải DIY Flat Panel](./README.md).
 
 ## 1. Chọn cách điều khiển
 
@@ -28,7 +28,13 @@ Driver ASCOM dành cho người dùng muốn điều khiển Main Cover và Flat
 1. Cấp nguồn cho DIY Flat Panel.
 2. Trên điện thoại hoặc máy tính, kết nối Wi-Fi `FlatPanel_v1` nếu box chưa được cấu hình Wi-Fi nhà.
 3. Mở `http://192.168.4.1`.
-4. Trong tab **Configure**, có thể cấu hình Wi-Fi Station để lần sau mở nhanh bằng `http://flatpanel.local`.
+4. Trong tab **Configure**, nhập tên và mật khẩu Wi-Fi nhà **2,4 GHz**, bật Station rồi bấm **Save Wi-Fi and Connect**. Nút Save chỉ mở khi có cả tên và mật khẩu; tên chỉ gồm dấu cách không hợp lệ. Tên Wi-Fi có dấu cách vẫn được giữ nguyên. Khi tắt Station, có thể Save mà không cần nhập tên/mật khẩu.
+5. Giữ kết nối với `FlatPanel_v1` và xem kết quả ngay dưới nút Save: đang kết nối, đã vào mạng nhưng chờ IP, thành công kèm IP hoặc thất bại kèm mã lỗi. **Đã lưu không đồng nghĩa đã kết nối.** Box không tự reboot hay chuyển trang khi lưu Wi-Fi trên web.
+6. Khi thành công, có thể tiếp tục dùng trang hiện tại. Muốn dùng địa chỉ IP Wi-Fi nhà hoặc `http://flatpanel.local`, chuyển điện thoại/máy tính sang cùng mạng nhà trước, rồi mở địa chỉ đó hoặc nút **Open control page**. Nút này chỉ hiện ở trang AP `192.168.4.1`; khi đã sang trang điều khiển qua Wi-Fi nhà thì tự ẩn và thông báo bạn đang ở trang điều khiển. Địa chỉ IP vẫn dùng được nếu thiết bị không phân giải được `flatpanel.local`.
+
+Wi-Fi `FlatPanel_v1` vẫn hoạt động để cấu hình và chẩn đoán, kể cả khi Station đã kết nối. Khi box chuyển kênh theo router, điện thoại có thể ngắt Wi-Fi ngắn; kết nối lại `FlatPanel_v1` và mở `http://192.168.4.1`. Mạng AP này không có mật khẩu: chỉ sử dụng ở môi trường tin cậy.
+
+Nếu kết nối thất bại, chụp cả phần trạng thái và mã lỗi gửi người hỗ trợ; **không cần gửi mật khẩu**. Box chờ tối đa 30 giây mỗi lần thử, tự thử lại; sau nhiều lần thất bại sẽ chờ 5 phút trước chu kỳ tiếp theo. Có thể sửa thông tin rồi bấm Save để thử ngay. Lỗi xác thực/handshake không đủ khẳng định sai mật khẩu; còn có thể liên quan bảo mật router hoặc tín hiệu. Không nhận IP sau khi đã vào mạng thì cần kiểm tra DHCP của router.
 
 Nếu box chỉ có Main Cover, tắt **Scope Cover installed** trong tab Configure. Thiết lập này được lưu trong box và Scope Cover sẽ được ẩn đi.
 
